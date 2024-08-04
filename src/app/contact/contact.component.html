@@ -1,0 +1,49 @@
+<div class="py-20 ">
+  <div class="h-screen flex flex-col justify-center ite" >
+  <div class="translate-y-48">
+  <h1 class="text-5xl text-[#2c3e50] uppercase font-bold pb-5 text-center">
+    contact component
+  </h1>
+  <div class="flex justify-center items-center gap-2">
+    <div class="w-32 h-1 bg-[#2c3e50]"></div>
+    <i class="fa-solid fa-star text-xl text-[#2c3e50]"></i>
+    <div class="w-32 h-1 bg-[#2c3e50]"></div>
+  </div>
+</div>
+<div
+  class="container m-auto py-6 w-[50%] flex flex-col justify-center items-center"
+>
+  <div
+    class="relative z-0 w-full mb-5"
+    *ngFor="let field of inputFields; let i = index"
+  >
+    <input
+      [type]="field.type"
+      [name]="field.name"
+      [id]="field.id"
+      class="block py-2.5 px-0 w-full text-lg text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+      [placeholder]="field.placeholder"
+      required
+      (input)="checkInput($event, i)"
+    />
+    <label
+      [for]="field.id"
+      [ngClass]="
+        field.isEmpty
+          ? 'opacity-0 scale-100 translate-y-0'
+          : 'opacity-100 scale-75 -translate-y-6'
+      "
+      class="peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-500 ease-in-out transform top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#1abc9c] transition-all"
+    >
+      {{ field.label }}
+    </label>
+  </div>
+
+  <button
+    class="bg-[#1abc9c] p-2 rounded-md mt-4 text-xl px-5 focus:bg-[#1abcbb] hover:bg-[#1abcbb] transition-all duration-500 ease-in-out text-white"
+  >
+    send message
+  </button>
+</div>
+</div>
+</div>

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-icons {
+  @apply rounded-full w-[40px] h-[40px] flex justify-center items-center border-2 border-solid hover:cursor-pointer hover:text-[#2c3e50] hover:border-[#2c3e50] hover:bg-white
+    transition-all duration-300 ease-in-out;
+}
+

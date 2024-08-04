@@ -1,0 +1,64 @@
+<nav
+[ngStyle]="{'padding-bottom': padding}"
+  class="z-[99999] transition-all duration-500 bg-[#2c3e50] pt-2 fixed top-0 left-0 right-0 border-gray-200 px-5"
+>
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <a routerLink="home" class="flex items-center">
+      <span
+        class="self-center uppercase text-5xl font-bold whitespace-nowrap text-white"
+        >Start Framework</span
+      >
+    </a>
+    <div
+      (click)="toggle()"
+      class="flex items-center p-3 w-14 h-14 text-white rounded-lg hover:cursor-pointer lg:hidden  border-2 border-solid"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+        />
+      </svg>
+    </div>
+    <div
+      class="w-full transition-all duration-700 lg:block lg:w-auto"
+      [ngClass]="{ hidden: menuHidden, block: !menuHidden }"
+    >
+      <ul
+        class="flex gap-3 flex-col mt-4 lg:flex-row transition-all duration-700 lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium uppercase"
+      >
+        <li>
+          <a
+            routerLink="about"
+            routerLinkActive=" bg-[#1abc9c] "
+            class="py-1 lg:px-3 text-xl px-3 text-white rounded lg:text-white-700 lg:p-2 transition-all duration-500 hover:text-gray-500"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="portfolio"
+            routerLinkActive="bg-[#1abc9c]  "
+            class="py-1 px-3 text-xl lg:px-3 text-white rounded lg:text-white-700 lg:p-0 transition-all duration-500 hover:text-gray-500"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="contact"
+            routerLinkActive="bg-[#1abc9c] "
+            class="py-1 px-3 text-xl text-white rounded lg:px-3 lg:text-white-700 lg:p-0 transition-all duration-500 hover:text-gray-500"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="gallery"
+            routerLinkActive="bg-[#1abc9c] "
+            class="py-1 px-3 text-xl text-white rounded lg:px-3 lg:text-white-700 lg:p-0 transition-all duration-500 hover:text-gray-500"
+            >Gallery</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
