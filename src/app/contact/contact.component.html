@@ -29,10 +29,7 @@
     <label
       [for]="field.id"
       [ngClass]="
-        field.isEmpty
-          ? 'opacity-0 scale-100 translate-y-0'
-          : 'opacity-100 scale-75 -translate-y-6'
-      "
+        field.isEmpty ? 'opacity-0 scale-100 translate-y-0' : 'opacity-100 scale-75 -translate-y-6'"
       class="peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-500 ease-in-out transform top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#1abc9c] transition-all"
     >
       {{ field.label }}

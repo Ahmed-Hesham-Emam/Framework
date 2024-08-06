@@ -1,11 +1,11 @@
 import { CommonModule, NgStyle } from '@angular/common';
-import { Component, HostListener  } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink,RouterLinkActive, NgStyle],
+  imports: [CommonModule, RouterLink, RouterLinkActive, NgStyle],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -15,17 +15,15 @@ export class NavbarComponent {
     this.menuHidden = !this.menuHidden;
   }
 
-
-  padding: string = '20px';
+  padding: string = '15px';
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset;
     if (offset > 100) {
-      this.padding = '10px';
+      this.padding = '5px';
     } else {
-      this.padding = '16px';
+      this.padding = '15px';
     }
   }
-
 }

@@ -1,5 +1,5 @@
 <nav
-[ngStyle]="{'padding-bottom': padding}"
+  [ngStyle]="{ 'padding-bottom': padding }"
   class="z-[99999] transition-all duration-500 bg-[#2c3e50] pt-2 fixed top-0 left-0 right-0 border-gray-200 px-5"
 >
   <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -9,9 +9,10 @@
         >Start Framework</span
       >
     </a>
+
     <div
       (click)="toggle()"
-      class="flex items-center p-3 w-14 h-14 text-white rounded-lg hover:cursor-pointer lg:hidden  border-2 border-solid"
+      class="flex items-center p-3 w-14 h-14 text-white rounded-lg hover:cursor-pointer lg:hidden border-2 border-solid"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path
@@ -19,6 +20,7 @@
         />
       </svg>
     </div>
+
     <div
       class="w-full transition-all duration-700 lg:block lg:w-auto"
       [ngClass]="{ hidden: menuHidden, block: !menuHidden }"
@@ -62,5 +64,3 @@
     </div>
   </div>
 </nav>
-
-
